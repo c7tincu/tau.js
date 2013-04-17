@@ -1,0 +1,14 @@
+{
+  "name" : "tau.js",
+  "version" : "0.0.1",
+  "private" : true,
+  "devDependencies" :
+    {
+      "grunt-cli" : "latest",
+      "grunt-contrib-uglify" : "latest"
+    },
+  "scripts" :
+    {
+      "grunt" : "node_modules/grunt-cli/bin/grunt"
+    }
+}
