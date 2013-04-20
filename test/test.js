@@ -69,7 +69,7 @@ describe("`var Upsilon = Tau.noConflict();`:", function () {
   var Upsilon;
 
   before(function () {
-    Upsilon = new Tau.noConflict();
+    Upsilon = Tau.noConflict();
   });
 
   it("… should restore `Tau` to its previous owner.", function () {
