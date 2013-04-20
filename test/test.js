@@ -42,6 +42,14 @@ describe("`var tau = new Tau();`:", function () {
     assert.strictEqual(tau, Object(tau));
   });
 
+  it("… should result in `tau.getUtcIsoString()` being equal to `\"1970-01-01T00:00:000Z\"`.", function () {
+    assert.strictEqual(tau.getUtcIsoString(), "1970-01-01T00:00:000Z");
+  });
+
+  it("… should result in `tau.isValid()` being `true`.", function () {
+    assert.strictEqual(tau.isValid(), true);
+  })
+
 });
 
 
