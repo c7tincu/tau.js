@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>tau.js test runner</title>
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css"/>
+    <script>
+    var Tau = "previous value";
+    </script>
+    <script src="../dist/tau.js"></script>
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script>
+    mocha.setup("bdd");
+    </script>
+    <script src="../node_modules/proclaim/lib/proclaim.js"></script>
+    <script>
+    var assert = proclaim;
+    </script>
+    <script src="test.js"></script>
+  </head>
+  <body>
+    <h1>tau.js test runner</h1>
+    <div id="mocha"></div>
+    <script>
+    mocha.run();
+    </script>
+  </body>
+</html>
