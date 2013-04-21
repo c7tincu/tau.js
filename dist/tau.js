@@ -8,8 +8,9 @@ var api;
 var VERSION = "0.0.1";
 var ctorImpl;
 var getUtcIsoStringImpl;
+var int;
 var pad;
-var getMaxDate;
+var getMaxUtcDateImpl;
 var getUtcYearImpl;
 var setUtcYearImpl;
 var getUtcMonthImpl;
@@ -38,6 +39,19 @@ getUtcIsoStringImpl =
     return this[0];
   };
 
+int =
+  function (value) {
+    var result;
+
+    result = value;
+    if (P_OBJECT.toString.call(result) !== "[object Number]") {
+      result = Number(result);
+    }
+    result !== result && (result = 0);
+    result = Math.floor(result);
+    return result;
+  };
+
 pad =
   function (n, l) {
     var result;
@@ -50,7 +64,7 @@ pad =
     return result;
   };
 
-getMaxDate =
+getMaxUtcDateImpl =
   function (year, month) {
     /* January, March, May, July, August, October, or December. */
     if (
@@ -84,6 +98,13 @@ getUtcYearImpl =
 
 setUtcYearImpl =
   function (year, silent) {
+    year = int(year);
+    while (year < 0) {
+      year += 10000;
+    }
+    while (year > 9999) {
+      year -= 10000;
+    }
     this[0] = pad(year, 4) + this[0].slice(4);
     if (! silent && ! this.isValid()) {
       throw new Error("Invalid date.");
@@ -123,7 +144,7 @@ setUtcDateImpl =
     while (1) {
       year = this.getUtcYear();
       month = this.getUtcMonth();
-      maxDate = getMaxDate(year, month);
+      maxDate = api.getMaxUtcDate(year, month);
       if (date <= maxDate) {
         this[0] = this[0].slice(0, 8) + pad(date) + this[0].slice(10);
         if (! silent && ! this.isValid()) {
@@ -222,7 +243,8 @@ isValidImpl =
     }
     if (
       this.getUtcMonth() > 11 ||
-      this.getUtcDate() > getMaxDate(this.getUtcYear(), this.getUtcMonth()) ||
+      this.getUtcDate() >
+        api.getMaxUtcDate(this.getUtcYear(), this.getUtcMonth()) ||
       this.getUtcHours() > 23 ||
       this.getUtcMinutes() > 59 ||
       this.getUtcSeconds() > 59
@@ -239,6 +261,9 @@ isValidImpl =
 api = ctorImpl;
 
 api.prototype.getUtcIsoString = getUtcIsoStringImpl;
+
+api.getMaxUtcDate = getMaxUtcDateImpl;
+
 api.prototype.getUtcYear = getUtcYearImpl;
 api.prototype.setUtcYear = setUtcYearImpl;
 api.prototype.getUtcMonth = getUtcMonthImpl;
