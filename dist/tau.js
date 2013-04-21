@@ -119,14 +119,25 @@ getUtcMonthImpl =
 
 setUtcMonthImpl =
   function (month, silent) {
-    var delta = Math.floor(month / 11);
-    var year = this.getUtcYear() + delta;
+    var delta;
+    var year;
 
-    this[0] = this[0].slice(0, 5) + pad(month % 11 + 1) + this[0].slice(7);
+    month = int(month);
+    delta = 0;
+    while (month < 0)  {
+      -- delta;
+      month += 12;
+    }
+    while (month > 11) {
+      ++ delta;
+      month -= 12;
+    }
+    year = this.getUtcYear() + delta;
+    delta && this.setUtcYear(year, silent);
+    this[0] = this[0].slice(0, 5) + pad(month % 12 + 1) + this[0].slice(7);
     if (! silent && ! this.isValid()) {
       throw new Error("Invalid date.");
     }
-    delta && this.setUtcYear(year, silent);
     return this;
   };
 
