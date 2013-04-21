@@ -134,7 +134,7 @@ setUtcMonthImpl =
     }
     year = this.getUtcYear() + delta;
     delta && this.setUtcYear(year, silent);
-    this[0] = this[0].slice(0, 5) + pad(month % 12 + 1) + this[0].slice(7);
+    this[0] = this[0].slice(0, 5) + pad(month + 1) + this[0].slice(7);
     if (! silent && ! this.isValid()) {
       throw new Error("Invalid date.");
     }
