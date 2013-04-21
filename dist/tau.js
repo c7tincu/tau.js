@@ -9,6 +9,7 @@ var VERSION = "0.0.1";
 var ctorImpl;
 var getUtcIsoStringImpl;
 var pad;
+var getMaxDate;
 var getUtcYearImpl;
 var setUtcYearImpl;
 var getUtcMonthImpl;
@@ -47,6 +48,33 @@ pad =
       result = "0" + result;
     }
     return result;
+  };
+
+getMaxDate =
+  function (year, month) {
+    /* January, March, May, July, August, October, or December. */
+    if (
+      month === 0 || month === 2 || month === 4 ||
+      month === 6 || month === 7 || month === 9 ||
+      month === 11
+    ) {
+      return 31;
+    }
+    /* April, June, September, or November. */
+    else if (
+      month === 3 || month === 5 || month === 8 ||
+      month === 10
+    ) {
+      return 30;
+    }
+    /* February, leap year. */
+    else if (year % 400 === 0 || year % 100 !== 0 && year % 4 === 0) {
+      return 29;
+    }
+    /* February, common year. */
+    else {
+      return 28;
+    }
   };
 
 getUtcYearImpl =
@@ -95,29 +123,7 @@ setUtcDateImpl =
     while (1) {
       year = this.getUtcYear();
       month = this.getUtcMonth();
-      /* January, March, May, July, August, October, or December. */
-      if (
-        month === 0 || month === 2 || month === 4 ||
-        month === 6 || month === 7 || month === 9 ||
-        month === 11
-      ) {
-        maxDate = 31;
-      }
-      /* April, June, September, or November. */
-      else if (
-        month === 3 || month === 5 || month === 8 ||
-        month === 10
-      ) {
-        maxDate = 30;
-      }
-      /* February, leap year. */
-      else if (year % 400 === 0 || year % 100 !== 0 && year % 4 === 0) {
-        maxDate = 29;
-      }
-      /* February, common year. */
-      else {
-        maxDate = 28;
-      }
+      maxDate = getMaxDate(year, month);
       if (date <= maxDate) {
         this[0] = this[0].slice(0, 8) + pad(date) + this[0].slice(10);
         if (! silent && ! this.isValid()) {
@@ -214,7 +220,15 @@ isValidImpl =
     ) {
       return false;
     }
-    /* … */
+    if (
+      this.getUtcMonth() > 11 ||
+      this.getUtcDate() > getMaxDate(this.getUtcYear(), this.getUtcMonth()) ||
+      this.getUtcHours() > 23 ||
+      this.getUtcMinutes() > 59 ||
+      this.getUtcSeconds() > 59
+    ) {
+      return false;
+    }
     return true;
   };
 
