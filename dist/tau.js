@@ -99,9 +99,11 @@ getUtcYearImpl =
 setUtcYearImpl =
   function (year, silent) {
     year = int(year);
+    /* Inferior overflow. */
     while (year < 0) {
       year += 10000;
     }
+    /* Superior overflow. */
     while (year > 9999) {
       year -= 10000;
     }
@@ -124,10 +126,12 @@ setUtcMonthImpl =
 
     month = int(month);
     delta = 0;
+    /* Inferior overflow. */
     while (month < 0)  {
       -- delta;
       month += 12;
     }
+    /* Superior overflow. */
     while (month > 11) {
       ++ delta;
       month -= 12;
@@ -148,26 +152,26 @@ getUtcDateImpl =
 
 setUtcDateImpl =
   function (date, silent) {
-    var year;
-    var month;
     var maxDate;
 
-    while (1) {
-      year = this.getUtcYear();
-      month = this.getUtcMonth();
-      maxDate = api.getMaxUtcDate(year, month);
-      if (date <= maxDate) {
-        this[0] = this[0].slice(0, 8) + pad(date) + this[0].slice(10);
-        if (! silent && ! this.isValid()) {
-          throw new Error("Invalid date.");
-        }
-        return this;
-      }
-      else {
-        date -= maxDate;
-        this.setUtcMonth(month + 1, silent);
-      }
+    date = int(date);
+    /* Inferior overflow. */
+    while (date < 1) {
+      this.setUtcMonth(this.getUtcMonth() - 1);
+      date += api.getMaxUtcDate(this.getUtcYear(), this.getUtcMonth());
     }
+    /* Superior overflow. */
+    maxDate = api.getMaxUtcDate(this.getUtcYear(), this.getUtcMonth());
+    while (date > maxDate) {
+      date -= maxDate;
+      this.setUtcMonth(this.getUtcMonth() + 1);
+      maxDate = api.getMaxUtcDate(this.getUtcYear(), this.getUtcMonth());
+    }
+    this[0] = this[0].slice(0, 8) + pad(date) + this[0].slice(10);
+    if (! silent && ! this.isValid()) {
+      throw new Error("Invalid date.");
+    }
+    return this;
   };
 
 getUtcHoursImpl =
