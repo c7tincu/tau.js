@@ -97,7 +97,7 @@ getUtcYearImpl =
   };
 
 setUtcYearImpl =
-  function (year, silent) {
+  function (year) {
     year = int(year);
     /* Inferior overflow. */
     while (year < 0) {
@@ -108,9 +108,6 @@ setUtcYearImpl =
       year -= 10000;
     }
     this[0] = pad(year, 4) + this[0].slice(4);
-    if (! silent && ! this.isValid()) {
-      throw new Error("Invalid date.");
-    }
     return this;
   };
 
@@ -120,7 +117,7 @@ getUtcMonthImpl =
   };
 
 setUtcMonthImpl =
-  function (month, silent) {
+  function (month) {
     var delta;
     var year;
 
@@ -137,11 +134,8 @@ setUtcMonthImpl =
       month -= 12;
     }
     year = this.getUtcYear() + delta;
-    delta && this.setUtcYear(year, silent);
+    delta && this.setUtcYear(year);
     this[0] = this[0].slice(0, 5) + pad(month + 1) + this[0].slice(7);
-    if (! silent && ! this.isValid()) {
-      throw new Error("Invalid date.");
-    }
     return this;
   };
 
@@ -151,7 +145,7 @@ getUtcDateImpl =
   };
 
 setUtcDateImpl =
-  function (date, silent) {
+  function (date) {
     var maxDate;
 
     date = int(date);
@@ -168,9 +162,6 @@ setUtcDateImpl =
       maxDate = api.getMaxUtcDate(this.getUtcYear(), this.getUtcMonth());
     }
     this[0] = this[0].slice(0, 8) + pad(date) + this[0].slice(10);
-    if (! silent && ! this.isValid()) {
-      throw new Error("Invalid date.");
-    }
     return this;
   };
 
@@ -180,15 +171,12 @@ getUtcHoursImpl =
   };
 
 setUtcHoursImpl =
-  function (hours, silent) {
+  function (hours) {
     var delta = Math.floor(hours / 24);
     var date = this.getUtcDate() + delta;
 
     this[0] = this[0].slice(0, 11) + pad(hours % 24) + this[0].slice(13);
-    if (! silent && ! this.isValid()) {
-      throw new Error("Invalid date.");
-    }
-    delta && this.setUtcDate(date, silent);
+    delta && this.setUtcDate(date);
     return this;
   };
 
@@ -198,15 +186,12 @@ getUtcMinutesImpl =
   };
 
 setUtcMinutesImpl =
-  function (minutes, silent) {
+  function (minutes) {
     var delta = Math.floor(minutes / 60);
     var hours = this.getUtcHours() + delta;
 
     this[0] = this[0].slice(0, 14) + pad(minutes % 24) + this[0].slice(16);
-    if (! silent && ! this.isValid()) {
-      throw new Error("Invalid date.");
-    }
-    delta && this.setUtcHours(hours, silent);
+    delta && this.setUtcHours(hours);
     return this;
   };
 
@@ -216,15 +201,12 @@ getUtcSecondsImpl =
   };
 
 setUtcSecondsImpl =
-  function (seconds, silent) {
+  function (seconds) {
     var delta = Math.floor(seconds / 60);
     var minutes = this.getUtcMinutes() + delta;
 
     this[0] = this[0].slice(0, 17) + pad(seconds % 24) + this[0].slice(19);
-    if (! silent && ! this.isValid()) {
-      throw new Error("Invalid date.");
-    }
-    delta && this.setUtcMinutes(minutes, silent);
+    delta && this.setUtcMinutes(minutes);
     return this;
   };
 
@@ -234,16 +216,13 @@ getUtcMillisecondsImpl =
   };
 
 setUtcMillisecondsImpl =
-  function (milliseconds, silent) {
+  function (milliseconds) {
     var delta = Math.floor(milliseconds / 1000);
     var seconds = this.getUtcSeconds() + delta;
 
     this[0] =
       this[0].slice(0, 20) + pad(milliseconds % 1000, 3) + this[0].slice(23);
-    if (! silent && ! this.isValid()) {
-      throw new Error("Invalid date.");
-    }
-    delta && this.setUtcSeconds(seconds, silent);
+    delta && this.setUtcSeconds(seconds);
     return this;
   };
 

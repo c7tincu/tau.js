@@ -62,8 +62,8 @@ describe("`var tau = new Tau();`:", function () {
 describe("`Tau#getUtcYear()` & `Tau#setUtcYear()`:", function () {
 
   /* Tests for the minimum accepted value. */
-  describe("`var tau = new Tau(); tau.setUtcYear(0, true);`:", function () {
-    var tau = new Tau(); tau.setUtcYear(0, true);
+  describe("`var tau = new Tau(); tau.setUtcYear(0);`:", function () {
+    var tau = new Tau(); tau.setUtcYear(0);
     it("… should result in `tau.getUtcYear()` being equal to `0`.", function () {
       assert.strictEqual(tau.getUtcYear(), 0);
     });
@@ -76,8 +76,8 @@ describe("`Tau#getUtcYear()` & `Tau#setUtcYear()`:", function () {
   });
 
   /* Tests for a common value. */
-  describe("`var tau = new Tau(); tau.setUtcYear(2013, true);`:", function () {
-    var tau = new Tau(); tau.setUtcYear(2013, true);
+  describe("`var tau = new Tau(); tau.setUtcYear(2013);`:", function () {
+    var tau = new Tau(); tau.setUtcYear(2013);
     it("… should result in `tau.getUtcYear()` being equal to `2013`.", function () {
       assert.strictEqual(tau.getUtcYear(), 2013);
     });
@@ -90,8 +90,8 @@ describe("`Tau#getUtcYear()` & `Tau#setUtcYear()`:", function () {
   });
 
   /* Tests for the maximum accepted value. */
-  describe("`var tau = new Tau(); tau.setUtcYear(9999, true);`:", function () {
-    var tau = new Tau(); tau.setUtcYear(9999, true);
+  describe("`var tau = new Tau(); tau.setUtcYear(9999);`:", function () {
+    var tau = new Tau(); tau.setUtcYear(9999);
     it("… should result in `tau.getUtcYear()` being equal to `9999`.", function () {
       assert.strictEqual(tau.getUtcYear(), 9999);
     });
@@ -104,8 +104,8 @@ describe("`Tau#getUtcYear()` & `Tau#setUtcYear()`:", function () {
   });
 
   /* Tests for inferior overflow. */
-  describe("`var tau = new Tau(); tau.setUtcYear(- 1, true);`:", function () {
-    var tau = new Tau(); tau.setUtcYear(- 1, true);
+  describe("`var tau = new Tau(); tau.setUtcYear(- 1);`:", function () {
+    var tau = new Tau(); tau.setUtcYear(- 1);
     it("… should result in `tau.getUtcYear()` being equal to `9999`.", function () {
       assert.strictEqual(tau.getUtcYear(), 9999);
     });
@@ -118,8 +118,8 @@ describe("`Tau#getUtcYear()` & `Tau#setUtcYear()`:", function () {
   });
 
   /* Tests for superior overflow. */
-  describe("`var tau = new Tau(); tau.setUtcYear(10000, true);`:", function () {
-    var tau = new Tau(); tau.setUtcYear(10000, true);
+  describe("`var tau = new Tau(); tau.setUtcYear(10000);`:", function () {
+    var tau = new Tau(); tau.setUtcYear(10000);
     it("… should result in `tau.getUtcYear()` being equal to `0`.", function () {
       assert.strictEqual(tau.getUtcYear(), 0);
     });
@@ -141,8 +141,8 @@ describe("`Tau#getUtcYear()` & `Tau#setUtcYear()`:", function () {
 describe("`Tau#getUtcMonth()` & `Tau#setUtcMonth()`:", function () {
 
   /* Tests for the minimum accepted value. */
-  describe("`var tau = new Tau(); tau.setUtcMonth(0, true);`:", function () {
-    var tau = new Tau(); tau.setUtcMonth(0, true);
+  describe("`var tau = new Tau(); tau.setUtcMonth(0);`:", function () {
+    var tau = new Tau(); tau.setUtcMonth(0);
     it("… should result in `tau.getUtcMonth()` being equal to `0`.", function () {
       assert.strictEqual(tau.getUtcMonth(), 0);
     });
@@ -155,8 +155,8 @@ describe("`Tau#getUtcMonth()` & `Tau#setUtcMonth()`:", function () {
   });
 
   /* Tests for a common value. */
-  describe("`var tau = new Tau(); tau.setUtcMonth(4, true);`:", function () {
-    var tau = new Tau(); tau.setUtcMonth(4, true);
+  describe("`var tau = new Tau(); tau.setUtcMonth(4);`:", function () {
+    var tau = new Tau(); tau.setUtcMonth(4);
     it("… should result in `tau.getUtcMonth()` being equal to `4`.", function () {
       assert.strictEqual(tau.getUtcMonth(), 4);
     });
@@ -169,8 +169,8 @@ describe("`Tau#getUtcMonth()` & `Tau#setUtcMonth()`:", function () {
   });
 
   /* Tests for the maximum accepted value. */
-  describe("`var tau = new Tau(); tau.setUtcMonth(11, true);`:", function () {
-    var tau = new Tau(); tau.setUtcMonth(11, true);
+  describe("`var tau = new Tau(); tau.setUtcMonth(11);`:", function () {
+    var tau = new Tau(); tau.setUtcMonth(11);
     it("… should result in `tau.getUtcMonth()` being equal to `11`.", function () {
       assert.strictEqual(tau.getUtcMonth(), 11);
     });
@@ -183,8 +183,8 @@ describe("`Tau#getUtcMonth()` & `Tau#setUtcMonth()`:", function () {
   });
 
   /* Tests for inferior overflow. */
-  describe("`var tau = new Tau(); tau.setUtcMonth(- 1, true);`:", function () {
-    var tau = new Tau(); tau.setUtcMonth(- 1, true);
+  describe("`var tau = new Tau(); tau.setUtcMonth(- 1);`:", function () {
+    var tau = new Tau(); tau.setUtcMonth(- 1);
     it("… should result in `tau.getUtcMonth()` being equal to `11`.", function () {
       assert.strictEqual(tau.getUtcMonth(), 11);
     });
@@ -197,8 +197,8 @@ describe("`Tau#getUtcMonth()` & `Tau#setUtcMonth()`:", function () {
   });
 
   /* Tests for superior overflow. */
-  describe("`var tau = new Tau(); tau.setUtcMonth(12, true);`:", function () {
-    var tau = new Tau(); tau.setUtcMonth(12, true);
+  describe("`var tau = new Tau(); tau.setUtcMonth(12);`:", function () {
+    var tau = new Tau(); tau.setUtcMonth(12);
     it("… should result in `tau.getUtcMonth()` being equal to `0`.", function () {
       assert.strictEqual(tau.getUtcMonth(), 0);
     });
@@ -220,8 +220,8 @@ describe("`Tau#getUtcMonth()` & `Tau#setUtcMonth()`:", function () {
 describe("`Tau#getUtcDate()` & `Tau#setUtcDate()`:", function () {
 
   /* Tests for the minimum accepted value. */
-  describe("`var tau = new Tau(); tau.setUtcDate(1, true);`:", function () {
-    var tau = new Tau(); tau.setUtcDate(1, true);
+  describe("`var tau = new Tau(); tau.setUtcDate(1);`:", function () {
+    var tau = new Tau(); tau.setUtcDate(1);
     it("… should result in `tau.getUtcDate()` being equal to `1`.", function () {
       assert.strictEqual(tau.getUtcDate(), 1);
     });
@@ -234,8 +234,8 @@ describe("`Tau#getUtcDate()` & `Tau#setUtcDate()`:", function () {
   });
 
   /* Tests for a common value. */
-  describe("`var tau = new Tau(); tau.setUtcDate(3, true);`:", function () {
-    var tau = new Tau(); tau.setUtcDate(3, true);
+  describe("`var tau = new Tau(); tau.setUtcDate(3);`:", function () {
+    var tau = new Tau(); tau.setUtcDate(3);
     it("… should result in `tau.getUtcDate()` being equal to `3`.", function () {
       assert.strictEqual(tau.getUtcDate(), 3);
     });
@@ -248,8 +248,8 @@ describe("`Tau#getUtcDate()` & `Tau#setUtcDate()`:", function () {
   });
 
   /* Tests for the maximum accepted value. */
-  describe("`var tau = new Tau(); tau.setUtcDate(31, true);`:", function () {
-    var tau = new Tau(); tau.setUtcDate(31, true);
+  describe("`var tau = new Tau(); tau.setUtcDate(31);`:", function () {
+    var tau = new Tau(); tau.setUtcDate(31);
     it("… should result in `tau.getUtcDate()` being equal to `31`.", function () {
       assert.strictEqual(tau.getUtcDate(), 31);
     });
@@ -262,8 +262,8 @@ describe("`Tau#getUtcDate()` & `Tau#setUtcDate()`:", function () {
   });
 
   /* Tests for inferior overflow. */
-  describe("`var tau = new Tau(); tau.setUtcDate(0, true);`:", function () {
-    var tau = new Tau(); tau.setUtcDate(0, true);
+  describe("`var tau = new Tau(); tau.setUtcDate(0);`:", function () {
+    var tau = new Tau(); tau.setUtcDate(0);
     it("… should result in `tau.getUtcDate()` being equal to `31`.", function () {
       assert.strictEqual(tau.getUtcDate(), 31);
     });
@@ -276,8 +276,8 @@ describe("`Tau#getUtcDate()` & `Tau#setUtcDate()`:", function () {
   });
 
   /* Tests for superior overflow. */
-  describe("`var tau = new Tau(); tau.setUtcDate(32, true);`:", function () {
-    var tau = new Tau(); tau.setUtcDate(32, true);
+  describe("`var tau = new Tau(); tau.setUtcDate(32);`:", function () {
+    var tau = new Tau(); tau.setUtcDate(32);
     it("… should result in `tau.getUtcDate()` being equal to `1`.", function () {
       assert.strictEqual(tau.getUtcDate(), 1);
     });
