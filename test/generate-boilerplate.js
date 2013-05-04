@@ -46,8 +46,8 @@ for (i = 0, li = years.length; i < li; ++ i) {
         "        /* Year → Month → Date. */\n" +
         "        describe(\"`var tau = new Tau().setUtcYear(" + years[i] + ").setUtcMonth(" + j + ").setUtcDate(" + days[k] + ");`:\", function () {\n" +
         "          var tau = new Tau().setUtcYear(" + years[i] + ").setUtcMonth(" + j + ").setUtcDate(" + days[k] + ");\n" +
-        "          it(\"… should result in `tau.getUtcIsoString()` being equal to `\\\"" + years[i] + "-" + pad(j + 1) + "-" + pad(days[k]) + "T00:00:000Z\\\"`.\", function () {\n" +
-        "            assert.strictEqual(tau.getUtcIsoString(), \"" + years[i] + "-" + pad(j + 1) + "-" + pad(days[k]) + "T00:00:000Z\");\n" +
+        "          it(\"… should result in `tau.getUtcIsoString()` being equal to `\\\"" + years[i] + "-" + pad(j + 1) + "-" + pad(days[k]) + "T00:00:00.000Z\\\"`.\", function () {\n" +
+        "            assert.strictEqual(tau.getUtcIsoString(), \"" + years[i] + "-" + pad(j + 1) + "-" + pad(days[k]) + "T00:00:00.000Z\");\n" +
         "          });\n" +
         "          it(\"… should result in `tau.isValid()` being `true`.\", function () {\n" +
         "            assert.strictEqual(tau.isValid(), true);\n" +
@@ -56,8 +56,8 @@ for (i = 0, li = years.length; i < li; ++ i) {
         "        /* Date → Month → Year. */\n" +
         "        describe(\"`var tau = new Tau().setUtcDate(" + days[k] + ").setUtcMonth(" + j + ").setUtcYear(" + years[i] + ");`:\", function () {\n" +
         "          var tau = new Tau().setUtcDate(" + days[k] + ").setUtcMonth(" + j + ").setUtcYear(" + years[i] + ");\n" +
-        "          it(\"… should result in `tau.getUtcIsoString()` being equal to `\\\"" + years[i] + "-" + pad(j + 1) + "-" + pad(days[k]) + "T00:00:000Z\\\"`.\", function () {\n" +
-        "            assert.strictEqual(tau.getUtcIsoString(), \"" + years[i] + "-" + pad(j + 1) + "-" + pad(days[k]) + "T00:00:000Z\");\n" +
+        "          it(\"… should result in `tau.getUtcIsoString()` being equal to `\\\"" + years[i] + "-" + pad(j + 1) + "-" + pad(days[k]) + "T00:00:00.000Z\\\"`.\", function () {\n" +
+        "            assert.strictEqual(tau.getUtcIsoString(), \"" + years[i] + "-" + pad(j + 1) + "-" + pad(days[k]) + "T00:00:00.000Z\");\n" +
         "          });\n" +
         "          it(\"… should result in `tau.isValid()` being `true`.\", function () {\n" +
         "            assert.strictEqual(tau.isValid(), true);\n" +
