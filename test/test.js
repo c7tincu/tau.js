@@ -481,11 +481,11 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(1).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(1).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-02-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-02-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-02-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-02-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -563,8 +563,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(1).setUtcDate(30);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(1).setUtcDate(30);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-02-30T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-02-30T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-03-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-03-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -576,8 +576,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-02-30T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2000-02-30T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -586,8 +586,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(1).setUtcDate(31);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(1).setUtcDate(31);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-02-31T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-02-31T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-03-02T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-03-02T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -599,8 +599,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-02-31T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2000-02-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -609,8 +609,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(1).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(1).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-02-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-02-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-03-03T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-03-03T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -619,8 +619,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(1).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(1).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-02-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-02-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-02-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-02-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -636,8 +636,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(2).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(2).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-03-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-03-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-02-29T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-02-29T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -646,8 +646,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(2).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(2).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-03-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-03-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-03-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-03-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -774,8 +774,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(2).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(2).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-03-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-03-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-04-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-04-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -784,8 +784,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(2).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(2).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-03-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-03-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-03-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-03-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -801,8 +801,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(3).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(3).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-04-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-04-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-03-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-03-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -811,11 +811,11 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(3).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(3).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-04-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-04-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-04-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-04-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -916,8 +916,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(3).setUtcDate(31);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(3).setUtcDate(31);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-04-31T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-04-31T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-05-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-05-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -929,8 +929,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-04-31T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2000-04-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -939,8 +939,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(3).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(3).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-04-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-04-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-05-02T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-05-02T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -949,8 +949,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(3).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(3).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-04-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-04-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-04-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-04-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -966,8 +966,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(4).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(4).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-05-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-05-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-04-30T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-04-30T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -976,8 +976,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(4).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(4).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-05-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-05-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-05-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-05-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1104,8 +1104,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(4).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(4).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-05-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-05-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-06-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-06-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1114,8 +1114,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(4).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(4).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-05-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-05-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-05-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-05-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1131,8 +1131,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(5).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(5).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-06-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-06-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-05-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-05-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1141,11 +1141,11 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(5).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(5).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-06-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-06-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-06-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-06-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -1246,8 +1246,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(5).setUtcDate(31);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(5).setUtcDate(31);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-06-31T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-06-31T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-07-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-07-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1259,8 +1259,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-06-31T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2000-06-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -1269,8 +1269,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(5).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(5).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-06-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-06-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-07-02T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-07-02T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1279,8 +1279,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(5).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(5).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-06-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-06-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-06-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-06-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1296,8 +1296,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(6).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(6).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-07-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-07-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-06-30T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-06-30T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1306,8 +1306,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(6).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(6).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-07-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-07-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-07-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-07-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1434,8 +1434,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(6).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(6).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-07-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-07-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-08-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-08-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1444,8 +1444,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(6).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(6).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-07-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-07-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-07-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-07-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1461,8 +1461,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(7).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(7).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-08-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-08-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-07-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-07-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1471,8 +1471,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(7).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(7).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-08-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-08-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-08-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-08-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1599,8 +1599,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(7).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(7).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-08-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-08-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-09-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-09-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1609,8 +1609,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(7).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(7).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-08-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-08-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-08-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-08-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1626,8 +1626,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(8).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(8).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-09-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-09-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-08-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-08-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1636,11 +1636,11 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(8).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(8).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-09-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-09-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-09-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-09-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -1741,8 +1741,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(8).setUtcDate(31);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(8).setUtcDate(31);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-09-31T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-09-31T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-10-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-10-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1754,8 +1754,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-09-31T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2000-09-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -1764,8 +1764,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(8).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(8).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-09-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-09-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-10-02T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-10-02T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1774,8 +1774,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(8).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(8).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-09-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-09-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-09-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-09-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1791,8 +1791,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(9).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(9).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-10-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-10-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-09-30T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-09-30T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1801,8 +1801,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(9).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(9).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-10-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-10-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-10-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-10-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1929,8 +1929,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(9).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(9).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-10-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-10-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-11-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-11-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1939,8 +1939,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(9).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(9).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-10-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-10-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-10-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-10-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1956,8 +1956,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(10).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(10).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-11-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-11-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-10-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-10-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -1966,11 +1966,11 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(10).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(10).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-11-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-11-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-11-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-11-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -2071,8 +2071,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(10).setUtcDate(31);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(10).setUtcDate(31);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-11-31T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-11-31T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-12-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-12-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2085,7 +2085,7 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
             assert.strictEqual(tau.getUtcIsoString(), "2000-11-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -2094,8 +2094,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(10).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(10).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-11-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-11-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-12-02T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-12-02T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2104,8 +2104,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(10).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(10).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-11-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-11-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-11-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-11-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2121,8 +2121,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(11).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(11).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-12-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-12-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-11-30T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-11-30T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2131,8 +2131,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(11).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(11).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-12-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-12-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-12-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-12-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2259,8 +2259,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2000).setUtcMonth(11).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2000).setUtcMonth(11).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-12-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-12-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2001-01-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2001-01-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2269,8 +2269,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(11).setUtcYear(2000);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(11).setUtcYear(2000);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-12-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2000-12-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2000-12-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2000-12-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2290,8 +2290,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(0).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(0).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-01-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-01-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2012-12-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2012-12-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2300,8 +2300,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(0).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(0).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-01-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-01-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-01-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-01-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2428,8 +2428,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(0).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(0).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-01-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-01-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-02-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-02-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2438,8 +2438,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(0).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(0).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-01-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-01-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-01-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-01-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2455,8 +2455,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(1).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(1).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-02-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-02-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-01-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-01-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2465,11 +2465,11 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(1).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(1).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-02-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-02-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-02-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-02-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -2524,8 +2524,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(1).setUtcDate(29);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(1).setUtcDate(29);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-02-29T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-02-29T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-03-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-03-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2537,8 +2537,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-02-29T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2013-02-29T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -2547,8 +2547,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(1).setUtcDate(30);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(1).setUtcDate(30);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-02-30T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-02-30T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-03-02T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-03-02T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2560,8 +2560,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-02-30T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2013-02-30T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -2570,8 +2570,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(1).setUtcDate(31);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(1).setUtcDate(31);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-02-31T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-02-31T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-03-03T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-03-03T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2583,8 +2583,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-02-31T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2013-02-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -2593,8 +2593,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(1).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(1).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-02-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-02-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-03-04T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-03-04T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2603,8 +2603,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(1).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(1).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-02-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-02-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-02-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-02-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2620,8 +2620,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(2).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(2).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-03-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-03-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-02-28T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-02-28T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2630,8 +2630,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(2).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(2).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-03-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-03-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-03-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-03-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2758,8 +2758,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(2).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(2).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-03-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-03-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-04-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-04-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2768,8 +2768,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(2).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(2).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-03-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-03-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-03-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-03-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2785,8 +2785,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(3).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(3).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-04-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-04-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-03-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-03-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2795,11 +2795,11 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(3).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(3).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-04-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-04-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-04-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-04-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -2900,8 +2900,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(3).setUtcDate(31);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(3).setUtcDate(31);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-04-31T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-04-31T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-05-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-05-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2913,8 +2913,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-04-31T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2013-04-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -2923,8 +2923,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(3).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(3).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-04-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-04-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-05-02T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-05-02T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2933,8 +2933,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(3).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(3).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-04-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-04-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-04-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-04-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2950,8 +2950,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(4).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(4).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-05-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-05-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-04-30T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-04-30T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -2960,8 +2960,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(4).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(4).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-05-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-05-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-05-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-05-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3088,8 +3088,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(4).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(4).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-05-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-05-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-06-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-06-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3098,8 +3098,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(4).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(4).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-05-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-05-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-05-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-05-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3115,8 +3115,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(5).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(5).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-06-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-06-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-05-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-05-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3125,11 +3125,11 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(5).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(5).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-06-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-06-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-06-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-06-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -3230,8 +3230,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(5).setUtcDate(31);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(5).setUtcDate(31);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-06-31T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-06-31T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-07-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-07-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3243,8 +3243,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-06-31T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2013-06-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -3253,8 +3253,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(5).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(5).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-06-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-06-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-07-02T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-07-02T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3263,8 +3263,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(5).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(5).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-06-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-06-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-06-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-06-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3280,8 +3280,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(6).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(6).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-07-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-07-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-06-30T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-06-30T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3290,8 +3290,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(6).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(6).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-07-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-07-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-07-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-07-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3418,8 +3418,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(6).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(6).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-07-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-07-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-08-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-08-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3428,8 +3428,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(6).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(6).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-07-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-07-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-07-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-07-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3445,8 +3445,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(7).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(7).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-08-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-08-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-07-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-07-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3455,8 +3455,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(7).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(7).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-08-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-08-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-08-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-08-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3583,8 +3583,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(7).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(7).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-08-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-08-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-09-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-09-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3593,8 +3593,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(7).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(7).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-08-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-08-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-08-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-08-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3610,8 +3610,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(8).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(8).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-09-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-09-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-08-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-08-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3620,11 +3620,11 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(8).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(8).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-09-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-09-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-09-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-09-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -3725,8 +3725,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(8).setUtcDate(31);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(8).setUtcDate(31);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-09-31T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-09-31T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-10-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-10-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3738,8 +3738,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-09-31T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2013-09-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -3748,8 +3748,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(8).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(8).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-09-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-09-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-10-02T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-10-02T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3758,8 +3758,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(8).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(8).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-09-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-09-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-09-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-09-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3775,8 +3775,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(9).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(9).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-10-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-10-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-09-30T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-09-30T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3785,8 +3785,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(9).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(9).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-10-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-10-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-10-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-10-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3913,8 +3913,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(9).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(9).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-10-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-10-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-11-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-11-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3923,8 +3923,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(9).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(9).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-10-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-10-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-10-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-10-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3940,8 +3940,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(10).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(10).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-11-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-11-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-10-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-10-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -3950,11 +3950,11 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(10).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(10).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-11-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-11-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-11-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-11-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -4055,8 +4055,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(10).setUtcDate(31);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(10).setUtcDate(31);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-11-31T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-11-31T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-12-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-12-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4069,7 +4069,7 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
             assert.strictEqual(tau.getUtcIsoString(), "2013-11-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -4078,8 +4078,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(10).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(10).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-11-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-11-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-12-02T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-12-02T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4088,8 +4088,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(10).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(10).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-11-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-11-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-11-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-11-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4105,8 +4105,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(11).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(11).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-12-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-12-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-11-30T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-11-30T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4115,8 +4115,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(11).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(11).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-12-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-12-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-12-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-12-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4243,8 +4243,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2013).setUtcMonth(11).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2013).setUtcMonth(11).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-12-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-12-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2014-01-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2014-01-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4253,8 +4253,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(11).setUtcYear(2013);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(11).setUtcYear(2013);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-12-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2013-12-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2013-12-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2013-12-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4274,8 +4274,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(0).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(0).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-01-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-01-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2015-12-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2015-12-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4284,8 +4284,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(0).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(0).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-01-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-01-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-01-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-01-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4412,8 +4412,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(0).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(0).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-01-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-01-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-02-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-02-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4422,8 +4422,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(0).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(0).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-01-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-01-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-01-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-01-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4439,8 +4439,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(1).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(1).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-02-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-02-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-01-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-01-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4449,11 +4449,11 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(1).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(1).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-02-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-02-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-02-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-02-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -4531,8 +4531,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(1).setUtcDate(30);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(1).setUtcDate(30);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-02-30T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-02-30T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-03-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-03-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4544,8 +4544,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-02-30T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2016-02-30T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -4554,8 +4554,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(1).setUtcDate(31);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(1).setUtcDate(31);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-02-31T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-02-31T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-03-02T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-03-02T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4567,8 +4567,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-02-31T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2016-02-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -4577,8 +4577,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(1).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(1).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-02-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-02-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-03-03T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-03-03T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4587,8 +4587,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(1).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(1).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-02-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-02-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-02-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-02-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4604,8 +4604,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(2).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(2).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-03-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-03-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-02-29T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-02-29T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4614,8 +4614,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(2).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(2).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-03-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-03-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-03-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-03-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4742,8 +4742,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(2).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(2).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-03-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-03-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-04-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-04-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4752,8 +4752,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(2).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(2).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-03-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-03-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-03-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-03-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4769,8 +4769,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(3).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(3).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-04-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-04-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-03-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-03-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4779,11 +4779,11 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(3).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(3).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-04-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-04-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-04-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-04-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -4884,8 +4884,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(3).setUtcDate(31);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(3).setUtcDate(31);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-04-31T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-04-31T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-05-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-05-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4897,8 +4897,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-04-31T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2016-04-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -4907,8 +4907,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(3).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(3).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-04-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-04-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-05-02T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-05-02T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4917,8 +4917,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(3).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(3).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-04-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-04-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-04-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-04-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4934,8 +4934,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(4).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(4).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-05-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-05-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-04-30T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-04-30T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -4944,8 +4944,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(4).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(4).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-05-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-05-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-05-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-05-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5072,8 +5072,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(4).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(4).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-05-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-05-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-06-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-06-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5082,8 +5082,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(4).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(4).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-05-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-05-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-05-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-05-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5099,8 +5099,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(5).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(5).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-06-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-06-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-05-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-05-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5109,11 +5109,11 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(5).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(5).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-06-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-06-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-06-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-06-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -5214,8 +5214,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(5).setUtcDate(31);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(5).setUtcDate(31);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-06-31T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-06-31T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-07-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-07-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5227,8 +5227,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-06-31T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2016-06-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -5237,8 +5237,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(5).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(5).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-06-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-06-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-07-02T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-07-02T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5247,8 +5247,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(5).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(5).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-06-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-06-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-06-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-06-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5264,8 +5264,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(6).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(6).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-07-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-07-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-06-30T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-06-30T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5274,8 +5274,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(6).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(6).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-07-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-07-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-07-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-07-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5402,8 +5402,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(6).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(6).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-07-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-07-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-08-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-08-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5412,8 +5412,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(6).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(6).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-07-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-07-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-07-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-07-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5429,8 +5429,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(7).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(7).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-08-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-08-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-07-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-07-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5439,8 +5439,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(7).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(7).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-08-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-08-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-08-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-08-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5567,8 +5567,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(7).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(7).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-08-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-08-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-09-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-09-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5577,8 +5577,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(7).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(7).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-08-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-08-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-08-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-08-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5594,8 +5594,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(8).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(8).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-09-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-09-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-08-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-08-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5604,11 +5604,11 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(8).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(8).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-09-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-09-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-09-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-09-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -5709,8 +5709,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(8).setUtcDate(31);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(8).setUtcDate(31);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-09-31T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-09-31T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-10-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-10-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5722,8 +5722,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-09-31T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2016-09-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -5732,8 +5732,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(8).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(8).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-09-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-09-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-10-02T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-10-02T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5742,8 +5742,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(8).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(8).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-09-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-09-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-09-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-09-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5759,8 +5759,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(9).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(9).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-10-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-10-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-09-30T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-09-30T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5769,8 +5769,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(9).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(9).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-10-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-10-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-10-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-10-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5897,8 +5897,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(9).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(9).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-10-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-10-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-11-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-11-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5907,8 +5907,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(9).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(9).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-10-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-10-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-10-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-10-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5924,8 +5924,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(10).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(10).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-11-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-11-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-10-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-10-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -5934,11 +5934,11 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(10).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(10).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-11-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-11-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-11-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-11-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -6039,8 +6039,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(10).setUtcDate(31);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(10).setUtcDate(31);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-11-31T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-11-31T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-12-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-12-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6053,7 +6053,7 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
             assert.strictEqual(tau.getUtcIsoString(), "2016-11-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -6062,8 +6062,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(10).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(10).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-11-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-11-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-12-02T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-12-02T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6072,8 +6072,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(10).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(10).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-11-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-11-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-11-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-11-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6089,8 +6089,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(11).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(11).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-12-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-12-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-11-30T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-11-30T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6099,8 +6099,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(11).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(11).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-12-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-12-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-12-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-12-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6227,8 +6227,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2016).setUtcMonth(11).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2016).setUtcMonth(11).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-12-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-12-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2017-01-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2017-01-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6237,8 +6237,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(11).setUtcYear(2016);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(11).setUtcYear(2016);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-12-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2016-12-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2016-12-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2016-12-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6258,8 +6258,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(0).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(0).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-01-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-01-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2099-12-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2099-12-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6268,8 +6268,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(0).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(0).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-01-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-01-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-01-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-01-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6396,8 +6396,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(0).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(0).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-01-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-01-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-02-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-02-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6406,8 +6406,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(0).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(0).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-01-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-01-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-01-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-01-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6423,8 +6423,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(1).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(1).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-02-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-02-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-01-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-01-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6433,11 +6433,11 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(1).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(1).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-02-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-02-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-02-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-02-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -6492,8 +6492,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(1).setUtcDate(29);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(1).setUtcDate(29);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-02-29T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-02-29T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-03-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-03-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6505,8 +6505,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-02-29T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2100-02-29T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -6515,8 +6515,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(1).setUtcDate(30);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(1).setUtcDate(30);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-02-30T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-02-30T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-03-02T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-03-02T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6528,8 +6528,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-02-30T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2100-02-30T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -6538,8 +6538,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(1).setUtcDate(31);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(1).setUtcDate(31);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-02-31T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-02-31T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-03-03T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-03-03T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6551,8 +6551,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-02-31T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2100-02-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -6561,8 +6561,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(1).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(1).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-02-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-02-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-03-04T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-03-04T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6571,8 +6571,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(1).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(1).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-02-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-02-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-02-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-02-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6588,8 +6588,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(2).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(2).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-03-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-03-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-02-28T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-02-28T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6598,8 +6598,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(2).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(2).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-03-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-03-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-03-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-03-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6726,8 +6726,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(2).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(2).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-03-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-03-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-04-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-04-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6736,8 +6736,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(2).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(2).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-03-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-03-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-03-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-03-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6753,8 +6753,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(3).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(3).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-04-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-04-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-03-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-03-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6763,11 +6763,11 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(3).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(3).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-04-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-04-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-04-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-04-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -6868,8 +6868,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(3).setUtcDate(31);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(3).setUtcDate(31);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-04-31T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-04-31T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-05-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-05-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6881,8 +6881,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-04-31T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2100-04-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -6891,8 +6891,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(3).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(3).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-04-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-04-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-05-02T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-05-02T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6901,8 +6901,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(3).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(3).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-04-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-04-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-04-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-04-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6918,8 +6918,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(4).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(4).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-05-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-05-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-04-30T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-04-30T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -6928,8 +6928,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(4).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(4).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-05-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-05-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-05-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-05-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7056,8 +7056,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(4).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(4).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-05-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-05-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-06-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-06-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7066,8 +7066,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(4).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(4).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-05-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-05-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-05-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-05-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7083,8 +7083,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(5).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(5).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-06-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-06-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-05-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-05-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7093,11 +7093,11 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(5).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(5).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-06-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-06-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-06-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-06-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -7198,8 +7198,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(5).setUtcDate(31);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(5).setUtcDate(31);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-06-31T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-06-31T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-07-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-07-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7211,8 +7211,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-06-31T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2100-06-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -7221,8 +7221,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(5).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(5).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-06-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-06-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-07-02T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-07-02T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7231,8 +7231,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(5).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(5).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-06-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-06-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-06-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-06-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7248,8 +7248,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(6).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(6).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-07-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-07-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-06-30T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-06-30T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7258,8 +7258,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(6).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(6).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-07-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-07-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-07-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-07-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7386,8 +7386,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(6).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(6).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-07-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-07-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-08-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-08-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7396,8 +7396,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(6).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(6).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-07-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-07-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-07-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-07-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7413,8 +7413,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(7).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(7).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-08-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-08-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-07-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-07-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7423,8 +7423,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(7).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(7).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-08-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-08-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-08-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-08-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7551,8 +7551,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(7).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(7).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-08-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-08-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-09-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-09-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7561,8 +7561,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(7).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(7).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-08-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-08-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-08-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-08-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7578,8 +7578,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(8).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(8).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-09-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-09-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-08-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-08-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7588,11 +7588,11 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(8).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(8).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-09-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-09-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-09-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-09-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -7693,8 +7693,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(8).setUtcDate(31);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(8).setUtcDate(31);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-09-31T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-09-31T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-10-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-10-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7706,8 +7706,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
           it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-09-31T00:00:000Z\"`.", function () {
             assert.strictEqual(tau.getUtcIsoString(), "2100-09-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -7716,8 +7716,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(8).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(8).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-09-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-09-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-10-02T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-10-02T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7726,8 +7726,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(8).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(8).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-09-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-09-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-09-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-09-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7743,8 +7743,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(9).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(9).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-10-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-10-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-09-30T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-09-30T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7753,8 +7753,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(9).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(9).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-10-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-10-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-10-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-10-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7881,8 +7881,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(9).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(9).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-10-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-10-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-11-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-11-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7891,8 +7891,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(9).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(9).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-10-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-10-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-10-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-10-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7908,8 +7908,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(10).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(10).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-11-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-11-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-10-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-10-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -7918,11 +7918,11 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(10).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(10).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-11-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-11-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-11-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-11-31T00:00:000Z");
           });
-          it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+          it("… should result in `tau.isValid()` being `false`.", function () {
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -8023,8 +8023,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(10).setUtcDate(31);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(10).setUtcDate(31);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-11-31T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-11-31T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-12-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-12-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -8037,7 +8037,7 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
             assert.strictEqual(tau.getUtcIsoString(), "2100-11-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
-            assert.strictEqual(tau.isValid(), true);
+            assert.strictEqual(tau.isValid(), false);
           });
         });
       });
@@ -8046,8 +8046,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(10).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(10).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-11-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-11-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-12-02T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-12-02T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -8056,8 +8056,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(10).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(10).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-11-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-11-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-11-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-11-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -8073,8 +8073,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(11).setUtcDate(0);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(11).setUtcDate(0);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-12-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-12-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-11-30T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-11-30T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -8083,8 +8083,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(0).setUtcMonth(11).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(0).setUtcMonth(11).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-12-00T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-12-00T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-12-31T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-12-31T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -8211,8 +8211,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Year → Month → Date. */
         describe("`var tau = new Tau().setUtcYear(2100).setUtcMonth(11).setUtcDate(32);`:", function () {
           var tau = new Tau().setUtcYear(2100).setUtcMonth(11).setUtcDate(32);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-12-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-12-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2101-01-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2101-01-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
@@ -8221,8 +8221,8 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
         /* Date → Month → Year. */
         describe("`var tau = new Tau().setUtcDate(32).setUtcMonth(11).setUtcYear(2100);`:", function () {
           var tau = new Tau().setUtcDate(32).setUtcMonth(11).setUtcYear(2100);
-          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-12-32T00:00:000Z\"`.", function () {
-            assert.strictEqual(tau.getUtcIsoString(), "2100-12-32T00:00:000Z");
+          it("… should result in `tau.getUtcIsoString()` being equal to `\"2100-12-01T00:00:000Z\"`.", function () {
+            assert.strictEqual(tau.getUtcIsoString(), "2100-12-01T00:00:000Z");
           });
           it("… should result in `tau.isValid()` being `true`.", function () {
             assert.strictEqual(tau.isValid(), true);
