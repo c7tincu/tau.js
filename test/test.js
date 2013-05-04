@@ -8238,6 +8238,164 @@ describe("`Tau#setUtcYear()`, `Tau#setUtcMonth()`, and `Tau#setUtcDate()`:", fun
 
 
 
+/* `Tau#getUtcHours()` & `Tau#setUtcHours()`:
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+describe("`Tau#getUtcHours()` & `Tau#setUtcHours()`:", function () {
+
+  /* Tests for the minimum accepted value. */
+  describe("`var tau = new Tau(); tau.setUtcHours(0);`:", function () {
+    var tau = new Tau(); tau.setUtcHours(0);
+    it("… should result in `tau.getUtcHours()` being equal to `0`.", function () {
+      assert.strictEqual(tau.getUtcHours(), 0);
+    });
+    it("… should result in `tau.getUtcIsoString()` being equal to `\"1970-01-01T00:00:000Z\"`.", function () {
+      assert.strictEqual(tau.getUtcIsoString(), "1970-01-01T00:00:000Z");
+    });
+    it("… should result in `tau.isValid()` being `true`.", function () {
+      assert.strictEqual(tau.isValid(), true);
+    });
+  });
+
+  /* Tests for a common value. */
+  describe("`var tau = new Tau(); tau.setUtcHours(2);`:", function () {
+    var tau = new Tau(); tau.setUtcHours(2);
+    it("… should result in `tau.getUtcHours()` being equal to `2`.", function () {
+      assert.strictEqual(tau.getUtcHours(), 2);
+    });
+    it("… should result in `tau.getUtcIsoString()` being equal to `\"1970-01-01T02:00:000Z\"`.", function () {
+      assert.strictEqual(tau.getUtcIsoString(), "1970-01-01T02:00:000Z");
+    });
+    it("… should result in `tau.isValid()` being `true`.", function () {
+      assert.strictEqual(tau.isValid(), true);
+    });
+  });
+
+  /* Tests for the maximum accepted value. */
+  describe("`var tau = new Tau(); tau.setUtcHours(23);`:", function () {
+    var tau = new Tau(); tau.setUtcHours(23);
+    it("… should result in `tau.getUtcHours()` being equal to `23`.", function () {
+      assert.strictEqual(tau.getUtcHours(), 23);
+    });
+    it("… should result in `tau.getUtcIsoString()` being equal to `\"1970-01-01T23:00:000Z\"`.", function () {
+      assert.strictEqual(tau.getUtcIsoString(), "1970-01-01T23:00:000Z");
+    });
+    it("… should result in `tau.isValid()` being `true`.", function () {
+      assert.strictEqual(tau.isValid(), true);
+    });
+  });
+
+  /* Tests for inferior overflow. */
+  describe("`var tau = new Tau(); tau.setUtcHours(- 1);`:", function () {
+    var tau = new Tau(); tau.setUtcHours(- 1);
+    it("… should result in `tau.getUtcHours()` being equal to `23`.", function () {
+      assert.strictEqual(tau.getUtcHours(), 23);
+    });
+    it("… should result in `tau.getUtcIsoString()` being equal to `\"1969-12-31T23:00:000Z\"`.", function () {
+      assert.strictEqual(tau.getUtcIsoString(), "1969-12-31T23:00:000Z");
+    });
+    it("… should result in `tau.isValid()` being `true`.", function () {
+      assert.strictEqual(tau.isValid(), true);
+    });
+  });
+
+  /* Tests for superior overflow. */
+  describe("`var tau = new Tau(); tau.setUtcHours(24);`:", function () {
+    var tau = new Tau(); tau.setUtcHours(24);
+    it("… should result in `tau.getUtcHours()` being equal to `0`.", function () {
+      assert.strictEqual(tau.getUtcHours(), 0);
+    });
+    it("… should result in `tau.getUtcIsoString()` being equal to `\"1970-01-02T00:00:000Z\"`.", function () {
+      assert.strictEqual(tau.getUtcIsoString(), "1970-01-02T00:00:000Z");
+    });
+    it("… should result in `tau.isValid()` being `true`.", function () {
+      assert.strictEqual(tau.isValid(), true);
+    });
+  });
+
+});
+
+
+
+/* `Tau#getUtcMinutes()` & `Tau#setUtcMinutes()`:
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+describe("`Tau#getUtcMinutes()` & `Tau#setUtcMinutes()`:", function () {
+
+  /* Tests for the minimum accepted value. */
+  describe("`var tau = new Tau(); tau.setUtcMinutes(0);`:", function () {
+    var tau = new Tau(); tau.setUtcMinutes(0);
+    it("… should result in `tau.getUtcMinutes()` being equal to `0`.", function () {
+      assert.strictEqual(tau.getUtcMinutes(), 0);
+    });
+    it("… should result in `tau.getUtcIsoString()` being equal to `\"1970-01-01T00:00:000Z\"`.", function () {
+      assert.strictEqual(tau.getUtcIsoString(), "1970-01-01T00:00:000Z");
+    });
+    it("… should result in `tau.isValid()` being `true`.", function () {
+      assert.strictEqual(tau.isValid(), true);
+    });
+  });
+
+  /* Tests for a common value. */
+  describe("`var tau = new Tau(); tau.setUtcMinutes(20);`:", function () {
+    var tau = new Tau(); tau.setUtcMinutes(20);
+    it("… should result in `tau.getUtcMinutes()` being equal to `20`.", function () {
+      assert.strictEqual(tau.getUtcMinutes(), 20);
+    });
+    it("… should result in `tau.getUtcIsoString()` being equal to `\"1970-01-01T00:20:000Z\"`.", function () {
+      assert.strictEqual(tau.getUtcIsoString(), "1970-01-01T00:20:000Z");
+    });
+    it("… should result in `tau.isValid()` being `true`.", function () {
+      assert.strictEqual(tau.isValid(), true);
+    });
+  });
+
+  /* Tests for the maximum accepted value. */
+  describe("`var tau = new Tau(); tau.setUtcMinutes(59);`:", function () {
+    var tau = new Tau(); tau.setUtcMinutes(59);
+    it("… should result in `tau.getUtcMinutes()` being equal to `59`.", function () {
+      assert.strictEqual(tau.getUtcMinutes(), 59);
+    });
+    it("… should result in `tau.getUtcIsoString()` being equal to `\"1970-01-01T00:59:000Z\"`.", function () {
+      assert.strictEqual(tau.getUtcIsoString(), "1970-01-01T00:59:000Z");
+    });
+    it("… should result in `tau.isValid()` being `true`.", function () {
+      assert.strictEqual(tau.isValid(), true);
+    });
+  });
+
+  /* Tests for inferior overflow. */
+  describe("`var tau = new Tau(); tau.setUtcMinutes(- 1);`:", function () {
+    var tau = new Tau(); tau.setUtcMinutes(- 1);
+    it("… should result in `tau.getUtcMinutes()` being equal to `59`.", function () {
+      assert.strictEqual(tau.getUtcMinutes(), 59);
+    });
+    it("… should result in `tau.getUtcIsoString()` being equal to `\"1969-12-31T23:59:000Z\"`.", function () {
+      assert.strictEqual(tau.getUtcIsoString(), "1969-12-31T23:59:000Z");
+    });
+    it("… should result in `tau.isValid()` being `true`.", function () {
+      assert.strictEqual(tau.isValid(), true);
+    });
+  });
+
+  /* Tests for superior overflow. */
+  describe("`var tau = new Tau(); tau.setUtcMinutes(60);`:", function () {
+    var tau = new Tau(); tau.setUtcMinutes(60);
+    it("… should result in `tau.getUtcMinutes()` being equal to `0`.", function () {
+      assert.strictEqual(tau.getUtcMinutes(), 0);
+    });
+    it("… should result in `tau.getUtcIsoString()` being equal to `\"1970-01-01T01:00:000Z\"`.", function () {
+      assert.strictEqual(tau.getUtcIsoString(), "1970-01-01T01:00:000Z");
+    });
+    it("… should result in `tau.isValid()` being `true`.", function () {
+      assert.strictEqual(tau.isValid(), true);
+    });
+  });
+
+});
+
+
+
 /* `Tau.VERSION`:
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
