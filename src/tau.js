@@ -172,11 +172,24 @@ getUtcHoursImpl =
 
 setUtcHoursImpl =
   function (hours) {
-    var delta = Math.floor(hours / 24);
-    var date = this.getUtcDate() + delta;
+    var delta;
+    var date;
 
-    this[0] = this[0].slice(0, 11) + pad(hours % 24) + this[0].slice(13);
+    hours = int(hours);
+    delta = 0;
+    /* Inferior overflow. */
+    while (hours < 0) {
+      -- delta;
+      hours += 24;
+    }
+    /* Superior overflow. */
+    while (hours > 23) {
+      ++ delta;
+      hours -= 24;
+    }
+    date = this.getUtcDate() + delta;
     delta && this.setUtcDate(date);
+    this[0] = this[0].slice(0, 11) + pad(hours) + this[0].slice(13);
     return this;
   };
 
@@ -187,11 +200,24 @@ getUtcMinutesImpl =
 
 setUtcMinutesImpl =
   function (minutes) {
-    var delta = Math.floor(minutes / 60);
-    var hours = this.getUtcHours() + delta;
+    var delta;
+    var hours;
 
-    this[0] = this[0].slice(0, 14) + pad(minutes % 24) + this[0].slice(16);
+    minutes = int(minutes);
+    delta = 0;
+    /* Inferior overflow. */
+    while (minutes < 0) {
+      -- delta;
+      minutes += 60;
+    }
+    /* Superior overflow. */
+    while (minutes > 59) {
+      ++ delta;
+      minutes -= 60;
+    }
+    hours = this.getUtcHours() + delta;
     delta && this.setUtcHours(hours);
+    this[0] = this[0].slice(0, 14) + pad(minutes) + this[0].slice(16);
     return this;
   };
 
@@ -202,11 +228,24 @@ getUtcSecondsImpl =
 
 setUtcSecondsImpl =
   function (seconds) {
-    var delta = Math.floor(seconds / 60);
-    var minutes = this.getUtcMinutes() + delta;
+    var delta;
+    var minutes;
 
-    this[0] = this[0].slice(0, 17) + pad(seconds % 24) + this[0].slice(19);
+    seconds = int(seconds);
+    delta = 0;
+    /* Inferior overflow. */
+    while (seconds < 0) {
+      -- delta;
+      seconds += 60;
+    }
+    /* Superior overflow. */
+    while (seconds > 59) {
+      ++ delta;
+      seconds -= 60;
+    }
+    minutes = this.getUtcMinutes() + delta;
     delta && this.setUtcMinutes(minutes);
+    this[0] = this[0].slice(0, 17) + pad(seconds) + this[0].slice(19);
     return this;
   };
 
@@ -217,12 +256,24 @@ getUtcMillisecondsImpl =
 
 setUtcMillisecondsImpl =
   function (milliseconds) {
-    var delta = Math.floor(milliseconds / 1000);
-    var seconds = this.getUtcSeconds() + delta;
+    var delta;
+    var seconds;
 
-    this[0] =
-      this[0].slice(0, 20) + pad(milliseconds % 1000, 3) + this[0].slice(23);
+    milliseconds = int(milliseconds);
+    delta = 0;
+    /* Inferior overflow. */
+    while (milliseconds < 0) {
+      -- delta;
+      milliseconds += 1000;
+    }
+    /* Superior overflow. */
+    while (milliseconds > 999) {
+      ++ delta;
+      milliseconds -= 1000;
+    }
+    seconds = this.getUtcSeconds() + delta;
     delta && this.setUtcSeconds(seconds);
+    this[0] = this[0].slice(0, 20) + pad(milliseconds, 3) + this[0].slice(23);
     return this;
   };
 
@@ -237,6 +288,7 @@ isValidImpl =
     }
     if (
       this.getUtcMonth() > 11 ||
+      this.getUtcDate() < 1 ||
       this.getUtcDate() >
         api.getMaxUtcDate(this.getUtcYear(), this.getUtcMonth()) ||
       this.getUtcHours() > 23 ||
