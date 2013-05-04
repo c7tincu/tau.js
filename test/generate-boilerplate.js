@@ -27,21 +27,7 @@ pad =
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
 years = [ 2000, 2013, 2016, 2100 ];
-months =
-  [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-  ];
+months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
 days = [ 0, 1, 28, 29, 30, 31, 32 ];
 
 /* Fucking ugly boilerplate generator code is fucking ugly. */
@@ -58,36 +44,22 @@ for (i = 0, li = years.length; i < li; ++ i) {
       boilerplate +=
         "      describe(\"" + days[k] + ":\", function () {\n" +
         "        /* Year → Month → Date. */\n" +
-        "        describe(\"`var tau = new Tau().setUtcYear(" + years[i] +
-          ").setUtcMonth(" + j + ").setUtcDate(" + days[k] +
-          ");`:\", function () {\n" +
-        "          var tau = new Tau().setUtcYear(" + years[i] +
-          ").setUtcMonth(" + j + ").setUtcDate(" + days[k] + ");\n" +
-        "          it(\"… should result in `tau.getUtcIsoString()` being" +
-          " equal to `\\\"" + years[i] + "-" + pad(j + 1) + "-" +
-          pad(days[k]) + "T00:00:000Z\\\"`.\", function () {\n" +
-        "            assert.strictEqual(tau.getUtcIsoString(), \"" + years[i] +
-          "-" + pad(j + 1) + "-" + pad(days[k]) + "T00:00:000Z\");\n" +
+        "        describe(\"`var tau = new Tau().setUtcYear(" + years[i] + ").setUtcMonth(" + j + ").setUtcDate(" + days[k] + ");`:\", function () {\n" +
+        "          var tau = new Tau().setUtcYear(" + years[i] + ").setUtcMonth(" + j + ").setUtcDate(" + days[k] + ");\n" +
+        "          it(\"… should result in `tau.getUtcIsoString()` being equal to `\\\"" + years[i] + "-" + pad(j + 1) + "-" + pad(days[k]) + "T00:00:000Z\\\"`.\", function () {\n" +
+        "            assert.strictEqual(tau.getUtcIsoString(), \"" + years[i] + "-" + pad(j + 1) + "-" + pad(days[k]) + "T00:00:000Z\");\n" +
         "          });\n" +
-        "          it(\"… should result in `tau.isValid()` being `true`.\", " +
-          "function () {\n" +
+        "          it(\"… should result in `tau.isValid()` being `true`.\", function () {\n" +
         "            assert.strictEqual(tau.isValid(), true);\n" +
         "          });\n" +
         "        });\n" +
         "        /* Date → Month → Year. */\n" +
-        "        describe(\"`var tau = new Tau().setUtcDate(" + days[k] +
-          ").setUtcMonth(" + j + ").setUtcYear(" + years[i] +
-          ");`:\", function () {\n" +
-        "          var tau = new Tau().setUtcDate(" + days[k] +
-          ").setUtcMonth(" + j + ").setUtcYear(" + years[i] + ");\n" +
-        "          it(\"… should result in `tau.getUtcIsoString()` being" +
-          " equal to `\\\"" + years[i] + "-" + pad(j + 1) + "-" +
-          pad(days[k]) + "T00:00:000Z\\\"`.\", function () {\n" +
-        "            assert.strictEqual(tau.getUtcIsoString(), \"" + years[i] +
-          "-" + pad(j + 1) + "-" + pad(days[k]) + "T00:00:000Z\");\n" +
+        "        describe(\"`var tau = new Tau().setUtcDate(" + days[k] + ").setUtcMonth(" + j + ").setUtcYear(" + years[i] + ");`:\", function () {\n" +
+        "          var tau = new Tau().setUtcDate(" + days[k] + ").setUtcMonth(" + j + ").setUtcYear(" + years[i] + ");\n" +
+        "          it(\"… should result in `tau.getUtcIsoString()` being equal to `\\\"" + years[i] + "-" + pad(j + 1) + "-" + pad(days[k]) + "T00:00:000Z\\\"`.\", function () {\n" +
+        "            assert.strictEqual(tau.getUtcIsoString(), \"" + years[i] + "-" + pad(j + 1) + "-" + pad(days[k]) + "T00:00:000Z\");\n" +
         "          });\n" +
-        "          it(\"… should result in `tau.isValid()` being `true`.\", " +
-          "function () {\n" +
+        "          it(\"… should result in `tau.isValid()` being `true`.\", function () {\n" +
         "            assert.strictEqual(tau.isValid(), true);\n" +
         "          });\n" +
         "        });\n";
