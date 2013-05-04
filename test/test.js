@@ -1,10 +1,24 @@
 (
   function (context) {
-    "use strict";
+    /* Don’t trigger strict mode, so that we can reference `Tau` & `assert`. */
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ·.· ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
 var P_OBJECT = Object.prototype;
+
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Probably CommonJS. */
+if (typeof exports !== "undefined") {
+  /* Probably Node.js. */
+  if (typeof module !== "undefined" && module.exports) {
+    /* We wouldn’t be able to do this in strict mode. */
+    Tau = require("../dist/tau");
+    assert = require("assert");
+  }
+}
 
 
 
@@ -14,7 +28,7 @@ var P_OBJECT = Object.prototype;
 describe("`Tau`:", function () {
 
   it("… should be defined.", function () {
-    assert.isNotTypeOf(Tau, "undefined");
+    assert.notStrictEqual(typeof Tau, "undefined");
   });
 
   it("… should be a function.", function () {
@@ -37,7 +51,7 @@ describe("`var tau = new Tau();`:", function () {
   });
 
   it("… should result in `tau` being defined.", function () {
-    assert.isNotTypeOf(tau, "undefined");
+    assert.notStrictEqual(typeof tau, "undefined");
   });
 
   it("… should result in `tau` being an object.", function () {
@@ -8560,7 +8574,7 @@ describe("`Tau#getUtcMilliseconds()` & `Tau#setUtcMilliseconds()`:", function ()
 describe("`Tau.VERSION`:", function () {
 
   it("… should be defined.", function () {
-    assert.isNotTypeOf(Tau.VERSION, "undefined");
+    assert.notStrictEqual(typeof Tau.VERSION, "undefined");
   });
 
   it("… should be a string.", function () {
@@ -8574,27 +8588,30 @@ describe("`Tau.VERSION`:", function () {
 /* `var Upsilon = Tau.noConflict();`:
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
-describe("`var Upsilon = Tau.noConflict();`:", function () {
+/* Probably a browser. */
+if (typeof exports === "undefined") {
+  describe("`var Upsilon = Tau.noConflict();`:", function () {
 
-  var Upsilon;
+    var Upsilon;
 
-  before(function () {
-    Upsilon = Tau.noConflict();
+    before(function () {
+      Upsilon = Tau.noConflict();
+    });
+
+    it("… should restore `Tau` to its previous owner.", function () {
+      assert.strictEqual(Tau, "previous value");
+    });
+
+    it("… should result in `Upsilon` being defined.", function () {
+      assert.isNotTypeOf(Upsilon, "undefined");
+    });
+
+    it("… should result in `Upsilon` being a function.", function () {
+      assert.strictEqual(P_OBJECT.toString.call(Upsilon), "[object Function]");
+    });
+
   });
-
-  it("… should restore `Tau` to its previous owner.", function () {
-    assert.strictEqual(Tau, "previous value");
-  });
-
-  it("… should result in `Upsilon` being defined.", function () {
-    assert.isNotTypeOf(Upsilon, "undefined");
-  });
-
-  it("… should result in `Upsilon` being a function.", function () {
-    assert.strictEqual(P_OBJECT.toString.call(Upsilon), "[object Function]");
-  });
-
-});
+}
 
 
 

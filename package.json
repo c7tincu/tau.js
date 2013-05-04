@@ -11,6 +11,7 @@
     },
   "scripts" :
     {
-      "grunt" : "node_modules/grunt-cli/bin/grunt"
+      "grunt" : "node_modules/grunt-cli/bin/grunt",
+      "test" : "node_modules/mocha/bin/mocha test/test.js"
     }
 }
