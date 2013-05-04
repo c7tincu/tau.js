@@ -62,13 +62,13 @@ describe("`var tau = new Tau();`:", function () {
 describe("`Tau#getUtcYear()` & `Tau#setUtcYear()`:", function () {
 
   /* Tests for the minimum accepted value. */
-  describe("`var tau = new Tau(); tau.setUtcYear(0);`:", function () {
-    var tau = new Tau(); tau.setUtcYear(0);
-    it("… should result in `tau.getUtcYear()` being equal to `0`.", function () {
-      assert.strictEqual(tau.getUtcYear(), 0);
+  describe("`var tau = new Tau(); tau.setUtcYear(1);`:", function () {
+    var tau = new Tau(); tau.setUtcYear(1);
+    it("… should result in `tau.getUtcYear()` being equal to `1`.", function () {
+      assert.strictEqual(tau.getUtcYear(), 1);
     });
-    it("… should result in `tau.getUtcIsoString()` being equal to `\"0000-01-01T00:00:00.000Z\"`.", function () {
-      assert.strictEqual(tau.getUtcIsoString(), "0000-01-01T00:00:00.000Z");
+    it("… should result in `tau.getUtcIsoString()` being equal to `\"0001-01-01T00:00:00.000Z\"`.", function () {
+      assert.strictEqual(tau.getUtcIsoString(), "0001-01-01T00:00:00.000Z");
     });
     it("… should result in `tau.isValid()` being `true`.", function () {
       assert.strictEqual(tau.isValid(), true);
@@ -104,8 +104,8 @@ describe("`Tau#getUtcYear()` & `Tau#setUtcYear()`:", function () {
   });
 
   /* Tests for inferior overflow. */
-  describe("`var tau = new Tau(); tau.setUtcYear(- 1);`:", function () {
-    var tau = new Tau(); tau.setUtcYear(- 1);
+  describe("`var tau = new Tau(); tau.setUtcYear(0);`:", function () {
+    var tau = new Tau(); tau.setUtcYear(0);
     it("… should result in `tau.getUtcYear()` being equal to `9999`.", function () {
       assert.strictEqual(tau.getUtcYear(), 9999);
     });
@@ -120,11 +120,11 @@ describe("`Tau#getUtcYear()` & `Tau#setUtcYear()`:", function () {
   /* Tests for superior overflow. */
   describe("`var tau = new Tau(); tau.setUtcYear(10000);`:", function () {
     var tau = new Tau(); tau.setUtcYear(10000);
-    it("… should result in `tau.getUtcYear()` being equal to `0`.", function () {
-      assert.strictEqual(tau.getUtcYear(), 0);
+    it("… should result in `tau.getUtcYear()` being equal to `1`.", function () {
+      assert.strictEqual(tau.getUtcYear(), 1);
     });
-    it("… should result in `tau.getUtcIsoString()` being equal to `\"0000-01-01T00:00:00.000Z\"`.", function () {
-      assert.strictEqual(tau.getUtcIsoString(), "0000-01-01T00:00:00.000Z");
+    it("… should result in `tau.getUtcIsoString()` being equal to `\"0001-01-01T00:00:00.000Z\"`.", function () {
+      assert.strictEqual(tau.getUtcIsoString(), "0001-01-01T00:00:00.000Z");
     });
     it("… should result in `tau.isValid()` being `true`.", function () {
       assert.strictEqual(tau.isValid(), true);

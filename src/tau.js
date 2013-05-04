@@ -100,12 +100,12 @@ setUtcYearImpl =
   function (year) {
     year = int(year);
     /* Inferior overflow. */
-    while (year < 0) {
-      year += 10000;
+    while (year < 1) {
+      year += 9999;
     }
     /* Superior overflow. */
     while (year > 9999) {
-      year -= 10000;
+      year -= 9999;
     }
     this[0] = pad(year, 4) + this[0].slice(4);
     return this;
@@ -289,6 +289,7 @@ isValidImpl =
       return false;
     }
     if (
+      this.getUtcYear() < 1 ||
       this.getUtcMonth() > 11 ||
       this.getUtcDate() < 1 ||
       this.getUtcDate() >
