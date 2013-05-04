@@ -31,7 +31,7 @@ var prevTau;
 
 ctorImpl =
   function () {
-    this[0] = "1970-01-01T00:00:000Z";
+    this[0] = "1970-01-01T00:00:00.000Z";
   };
 
 getUtcIsoStringImpl =
@@ -281,8 +281,10 @@ isValidImpl =
   function () {
     if (
       P_OBJECT.toString.call(this[0]) !== "[object String]" ||
-      ! this[0].match(/(\d{4})-(\d{2})-(\d{2})T(\d{2})\:(\d{2})\:(\d{3})Z/) ||
-      this[0].length !== 21
+      ! this[0].match(
+          /(\d{4})-(\d{2})-(\d{2})T(\d{2})\:(\d{2})\:(\d{2})\.(\d{3})Z/
+        ) ||
+      this[0].length !== 24
     ) {
       return false;
     }
