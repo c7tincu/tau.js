@@ -3,7 +3,7 @@
 
 + [§1. Synopsis](#1-synopsis)
 + [§2. Installation Instructions](#2-installation-instructions)
-+ [§3. Build & Test Instructions](#3-build-test-instructions)
++ [§3. Build & Test Instructions](#3-build--test-instructions)
 + [§4. Quick API Reference](#4-quick-api-reference)
 + [§5. Support](#5-support)
 + [§6. Change Log](#6-change-log)
