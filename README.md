@@ -36,7 +36,34 @@ tested. It also means the library is notably slower than alternatives, for now.
 §2. Installation Instructions
 -------------------------------------------------------------------------------
 
-…
+### In browsers:
+
+Download
+[`dist/tau.min.js`](https://raw.github.com/CristianTincu/tau.js/master/dist/tau.min.js).<br/>
+**Or, with Bower:**
+Fire up a terminal window, and type the following command:
+
+```bash
+bower install tau.js
+```
+Then:
+
+```html
+<script src="path/to/tau.js"></script>
+```
+
+### In Node.js:
+
+Fire up a terminal window, and type the following command:
+
+```bash
+npm install tau.js
+```
+Then:
+
+```javascript
+var Tau = require("path/to/tau.js");
+```
 
 
 
