@@ -1,17 +1,42 @@
 {
   "name" : "tau.js",
-  "version" : "0.0.1",
-  "private" : true,
+  "version" : "0.1.0",
+  "description" : "A JavaScript date library.",
+  "keywords" :
+    [
+      "date",
+      "dates"
+    ],
+  "homepage" : "https://github.com/CristianTincu/tau.js",
+  "author" :
+    {
+      "name": "Cristian Tincu",
+      "email": "cristian@rupe.re"
+    },
+  "main" : "./dist/tau.js",
   "devDependencies" :
     {
-      "grunt-cli" : "latest",
-      "grunt-contrib-uglify" : "latest",
-      "mocha" : "latest",
-      "proclaim" : "latest"
+      "grunt-cli" : "0.1.7",
+      "grunt-contrib-uglify" : "0.2.0",
+      "mocha" : "1.9.0",
+      "proclaim" : "1.1.0"
     },
   "scripts" :
     {
       "grunt" : "node_modules/grunt-cli/bin/grunt",
       "test" : "node_modules/mocha/bin/mocha test/test.js"
-    }
+    },
+  "repository" :
+    {
+      "type" : "git",
+      "url" : "git@github.com:CristianTincu/tau.js.git"
+    },
+  "licenses" :
+    [
+      {
+        "type" : "MIT",
+        "url" :
+          "https://raw.github.com/CristianTincu/tau.js/master/LICENSE.md"
+      }
+    ]
 }

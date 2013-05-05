@@ -1,0 +1,6 @@
+{
+  "name" : "tau.js",
+  "version" : "0.1.0",
+  "main" : "./dist/tau.js",
+  "dependencies" : {}
+}
