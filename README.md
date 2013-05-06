@@ -70,7 +70,29 @@ var Tau = require("path/to/tau.js");
 §3. Build & Test Instructions
 -------------------------------------------------------------------------------
 
-…
+### In order to build:
+
+Fire up a terminal window, and type the following commands:
+
+```bash
+git clone git@github.com:CristianTincu/tau.js.git
+npm install
+npm run-script grunt
+```
+
+### In order to run the tests:
+
+First, build the library (see above).
+
+Then, if you want to run the tests server-side, with Node.js, fire up a
+terminal window, and type the following command:
+
+```bash
+npm run-script test
+```
+
+If you want to run the tests client-side, open `test/test-runner.html` in
+whatever browser you want to test against.
 
 
 
@@ -98,14 +120,17 @@ var Tau = require("path/to/tau.js");
 §7. Credits
 -------------------------------------------------------------------------------
 
-…
++ **Cristian Tincu** (@CristianTincu on GitHub and Twitter)
 
 
 
 §8. License
 -------------------------------------------------------------------------------
 
-…
+I made tau.js as an exercise, and as an experiment. You’re free to use it in
+your own exercises, experiments, or projects, whether they’re “closed” or
+“open”, commercial or non-commercial, “good” or “evil”, subject to the terms of
+the MIT License<sup>[3](#3)</sup>.
 
 
 
@@ -119,3 +144,12 @@ See [Tau on Wikipedia](http://en.wikipedia.org/wiki/Tau).
 ### 2
 
 See [Moment.js](http://momentjs.com/) and [XDate](http://arshaw.com/xdate/).
+
+### 3
+
+See
+[LICENSE.md](https://github.com/CristianTincu/tau.js/blob/master/LICENSE.md).
+
+
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/b99133b870004818d05d096cf9010cbc "githalytics.com")](http://githalytics.com/CristianTincu/tau.js)
