@@ -5,7 +5,7 @@
 + [§2. Installation Instructions](#2-installation-instructions)
 + [§3. Build & Test Instructions](#3-build--test-instructions)
 + [§4. Quick API Reference](#4-quick-api-reference)
-+ [§5. Support](#5-support)
++ [§5. Support](#5-support3)
 + [§6. Change Log](#6-change-log)
 + [§7. Credits](#7-credits)
 + [§8. License](#8-license)
@@ -104,17 +104,45 @@ whatever browser you want to test against.
 
 
 
-§5. Support
+§5. Support<sup>[3](#3)</sup>
 -------------------------------------------------------------------------------
 
-…
+I’ve tested tau.js on the following environments:
+
++ **Chrome “latest” (26.0.1410.63)**
+
++ **Chrome 4**
+
++ **Firefox “latest” (20.0.1)**
+
++ **Firefox 3.6**
+
++ **IE 10**
+
++ **IE 8**
+
++ **IE 7**
+
++ **IE 6**
+
++ **Safari “latest” (6.0.4)** on OS X
+
++ **Safari “latest” (5.1.7)** on Windows
+
++ **Mobile Safari on iOS 6**
+
++ **Opera “latest” (12.15)**
+
++ **Node.js “latest” (0.10.5)**
 
 
 
 §6. Change Log
 -------------------------------------------------------------------------------
 
-…
++ **0.1.0 (2013-05-07)**
+
+Initial development release of tau.js.
 
 
 
@@ -131,7 +159,7 @@ whatever browser you want to test against.
 I made tau.js as an exercise, and as an experiment. You’re free to use it in
 your own exercises, experiments, or projects, whether they’re “closed” or
 “open”, commercial or non-commercial, “good” or “evil”, subject to the terms of
-the MIT License<sup>[3](#3)</sup>.
+the MIT License<sup>[4](#4)</sup>.
 
 
 
@@ -147,6 +175,11 @@ See [Tau on Wikipedia](http://en.wikipedia.org/wiki/Tau).
 See [Moment.js](http://momentjs.com/) and [XDate](http://arshaw.com/xdate/).
 
 ### 3
+
+“Latest” means the current stable version of the respective environment, at the
+time I’m writing this text.
+
+### 4
 
 See
 [LICENSE.md](https://github.com/CristianTincu/tau.js/blob/master/LICENSE.md).
