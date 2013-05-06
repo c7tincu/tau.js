@@ -75,7 +75,8 @@ var Tau = require("path/to/tau.js");
 Fire up a terminal window, and type the following commands:
 
 ```bash
-git clone git@github.com:CristianTincu/tau.js.git
+git clone https://github.com/CristianTincu/tau.js.git
+cd tau.js
 npm install
 npm run-script grunt
 ```
