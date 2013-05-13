@@ -100,7 +100,47 @@ whatever browser you want to test against.
 §4. Quick API Reference
 -------------------------------------------------------------------------------
 
-…
+tau.js exposes the `Tau` pseudo-class to the environment on “load”, if the
+environment is a browser, or on “require”, if the environment supports CommonJS
+modules (e.g. Node.js).
+
++ `Tau()`
+
+Unlike the native `Date`, tau.js provides one humble constructor.<br/>
+Calling the constructor simply creates instances referencing the Unix epoch
+(00:00:00 UTC on the 1<sup>st</sup> of January, 1970).
+
++ `Tau#setUtcYear()`
++ `Tau#setUtcMonth()`
++ `Tau#setUtcDate()`
++ `Tau#setUtcHours()`
++ `Tau#setUtcMinutes()`
++ `Tau#setUtcSeconds()`
++ `Tau#setUtcMilliseconds()`
+
+These methods allow you to manipulate `Tau` instances, with respect to UTC.
+
+Unlike native `Date`’s equivalent methods, they support “chaining”.<br/>
+This apparently minor detail can compensate—to a certain degree—the
+constructor’s intentional lack of flexibility:
+
+```javascript
+var tau = new Tau().setUtcYear(2013).setUtcMonth(4).setUtcDate(3);
+```
+
+There’s one more important point, concerning these methods, that you should be
+aware of, when working with tau.js:
+
+```javascript
+//  Create a reference to the 30th of January, 2013.
+var tau = new Tau().setUtcYear(2013).setUtcMonth(0).setUtcDate(30);
+//  Would you do something like this with the native `Date`,
+//  you’ll move the reference to the 2nd of March:
+tau.setUtcMonth(1);
+//  tau.js takes a different approach. It’s not “upwards lenient”.
+//  It’ll move the reference to the 30th of February, which, of course,
+//  is an invalid date. Keep on reading…
+```
 
 
 
@@ -140,7 +180,7 @@ I’ve tested tau.js on the following environments:
 §6. Change Log
 -------------------------------------------------------------------------------
 
-+ **0.1.0 (2013-05-07)**
++ **0.1.0 (2013-05-14)**
 
 Initial development release of tau.js.
 
