@@ -10,7 +10,7 @@ var ctorImpl;
 var getUtcIsoStringImpl;
 var int;
 var pad;
-var getMaxUtcDateImpl;
+var getMaxDateImpl;
 var getUtcYearImpl;
 var setUtcYearImpl;
 var getUtcMonthImpl;
@@ -64,7 +64,7 @@ pad =
     return result;
   };
 
-getMaxUtcDateImpl =
+getMaxDateImpl =
   function (year, month) {
     /* January, March, May, July, August, October, or December. */
     if (
@@ -152,14 +152,14 @@ setUtcDateImpl =
     /* Inferior overflow. */
     while (date < 1) {
       this.setUtcMonth(this.getUtcMonth() - 1);
-      date += api.getMaxUtcDate(this.getUtcYear(), this.getUtcMonth());
+      date += api.getMaxDate(this.getUtcYear(), this.getUtcMonth());
     }
     /* Superior overflow. */
-    maxDate = api.getMaxUtcDate(this.getUtcYear(), this.getUtcMonth());
+    maxDate = api.getMaxDate(this.getUtcYear(), this.getUtcMonth());
     while (date > maxDate) {
       date -= maxDate;
       this.setUtcMonth(this.getUtcMonth() + 1);
-      maxDate = api.getMaxUtcDate(this.getUtcYear(), this.getUtcMonth());
+      maxDate = api.getMaxDate(this.getUtcYear(), this.getUtcMonth());
     }
     this[0] = this[0].slice(0, 8) + pad(date) + this[0].slice(10);
     return this;
@@ -293,7 +293,7 @@ isValidImpl =
       this.getUtcMonth() > 11 ||
       this.getUtcDate() < 1 ||
       this.getUtcDate() >
-        api.getMaxUtcDate(this.getUtcYear(), this.getUtcMonth()) ||
+        api.getMaxDate(this.getUtcYear(), this.getUtcMonth()) ||
       this.getUtcHours() > 23 ||
       this.getUtcMinutes() > 59 ||
       this.getUtcSeconds() > 59
@@ -311,7 +311,7 @@ api = ctorImpl;
 
 api.prototype.getUtcIsoString = getUtcIsoStringImpl;
 
-api.getMaxUtcDate = getMaxUtcDateImpl;
+api.getMaxDate = getMaxDateImpl;
 
 api.prototype.getUtcYear = getUtcYearImpl;
 api.prototype.setUtcYear = setUtcYearImpl;

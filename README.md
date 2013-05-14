@@ -5,7 +5,7 @@
 + [§2. Installation Instructions](#2-installation-instructions)
 + [§3. Build & Test Instructions](#3-build--test-instructions)
 + [§4. Quick API Reference](#4-quick-api-reference)
-+ [§5. Support](#5-support3)
++ [§5. Support](#5-support5)
 + [§6. Change Log](#6-change-log)
 + [§7. Credits](#7-credits)
 + [§8. License](#8-license)
@@ -155,9 +155,50 @@ tau.js moves the `tau` reference to the 30<sup>th</sup> of April, although that
 would be an invalid date. But you can check that, via the `Tau#isValid()`
 method.
 
+Note that tau.js **does** handle date overflow, though, when its outcome is
+100% predicatable. That happens when change might propagate “upwards”:
+`Tau#setUtcMonth()` might impact years, `Tau#setUtcDate()` might impact months,
+years, `Tau#setUtcHour()` might impact month days, months, years, and so on.
 
++ `Tau#isValid()`
 
-§5. Support<sup>[3](#3)</sup>
+This method allows you to check if a `Tau` instance is valid.<br/>
+`Tau#setUtcYear()` and `Tau#setUtcMonth()` are the only two methods that may
+produce invalid dates.
+
++ `Tau#getUtcYear()`
++ `Tau#getUtcMonth()`
++ `Tau#getUtcDate()`
++ `Tau#getUtcHours()`
++ `Tau#getUtcMinutes()`
++ `Tau#getUtcSeconds()`
++ `Tau#getUtcMilliseconds()`
+
+This methods behave pretty much like you’d probably expect.
+
++ `Tau#getUtcIsoString()`
+
+You can use this method to obtain a serialization of a `Tau` instance in the
+ISO 8601 extended format, with respect to UTC.
+
++ `Tau.getMaxDate()`
+
+This is a helper function that allows you to find the last valid month day,
+given a day and a month.
+
++ `Tau.VERSION`
+
+This property can be queried to find out the current tau.js release.<br/>
+tau.js is semantically versioned<sup>[3](#3)</sup>. See
+[§6. Change Log](#6-change-log) for a brief release history.
+
++ `Tau.noConflict()`
+
+If the environment is a browser, this method would—if called—throw tau.js into
+“no conflict” mode<sup>[4](#4)</sup>, and restore `Tau` to its previous owner,
+if any.
+
+§5. Support<sup>[5](#5)</sup>
 -------------------------------------------------------------------------------
 
 I’ve tested tau.js on the following environments:
@@ -212,7 +253,7 @@ Initial development release of tau.js.
 I made tau.js as an exercise, and as an experiment. You’re free to use it in
 your own exercises, experiments, or projects, whether they’re “closed” or
 “open”, commercial or non-commercial, “good” or “evil”, subject to the terms of
-the MIT License<sup>[4](#4)</sup>.
+the MIT License<sup>[6](#6)</sup>.
 
 
 
@@ -229,10 +270,20 @@ See [Moment.js](http://momentjs.com/) and [XDate](http://arshaw.com/xdate/).
 
 ### 3
 
+See [Semantic Versioning](http://semver.org/).
+
+### 4
+
+I’ve borrowed this trick—as well as others—from Underscore.js.
+
+See [Underscore.js’s `noConflict()`](http://underscorejs.org/#noConflict).
+
+### 5
+
 “Latest” means the current stable version of the respective environment, at the
 time I’m writing this text.
 
-### 4
+### 6
 
 See
 [LICENSE.md](https://github.com/CristianTincu/tau.js/blob/master/LICENSE.md).
