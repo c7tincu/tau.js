@@ -106,7 +106,7 @@ modules (e.g. Node.js).
 
 + `Tau()`
 
-Unlike the native `Date`, tau.js provides one humble constructor.<br/>
+Unlike the native `Date`, tau.js provides only one humble constructor.<br/>
 Calling the constructor simply creates instances referencing the Unix epoch
 (00:00:00 UTC on the 1<sup>st</sup> of January, 1970).
 
@@ -128,19 +128,32 @@ constructor’s intentional lack of flexibility:
 var tau = new Tau().setUtcYear(2013).setUtcMonth(4).setUtcDate(3);
 ```
 
-There’s one more important point, concerning these methods, that you should be
-aware of, when working with tau.js:
+There’s one **extremely** important point, concerning these methods, that you
+should be aware of.<br/>
+Let’s consider the following example:
 
 ```javascript
-//  Create a reference to the 30th of January, 2013.
-var tau = new Tau().setUtcYear(2013).setUtcMonth(0).setUtcDate(30);
-//  Would you do something like this with the native `Date`,
-//  you’ll move the reference to the 2nd of March:
-tau.setUtcMonth(1);
-//  tau.js takes a different approach. It’s not “upwards lenient”.
-//  It’ll move the reference to the 30th of February, which, of course,
-//  is an invalid date. Keep on reading…
+var date = new Date(2013, 0, 30);
+date.setUTCMonth(1);
 ```
+
+The native `Date` moves the `date` reference to the 2<sup>nd</sup> of March, as
+there’s no such thing as the 30<sup>th</sup> of April. In a more general
+context, such a decision might cause trouble, as a naïve API consumer might not
+be aware that a call to `Date#setUTCMonth()` could, in fact, modify the month
+day, also. JavaScript’s `Date` object doesn’t provide any help in treating such
+cases.
+
+In contrast:
+
+```javascript
+var tau = new Tau().setUtcYear(2013).setUtcMonth(0).setUtcDate(30);
+tau.setUtcMonth(1);
+```
+
+tau.js moves the `tau` reference to the 30<sup>th</sup> of April, although that
+would be an invalid date. But you can check that, via the `Tau#isValid()`
+method.
 
 
 
