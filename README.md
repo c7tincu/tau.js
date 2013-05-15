@@ -138,7 +138,7 @@ date.setUTCMonth(1);
 ```
 
 The native `Date` moves the `date` reference to the 2<sup>nd</sup> of March, as
-there’s no such thing as the 30<sup>th</sup> of April. In a more general
+there’s no such thing as the 30<sup>th</sup> of Februart. In a more general
 context, such a decision might cause trouble, as a naïve API consumer might not
 be aware that a call to `Date#setUTCMonth()` could, in fact, modify the month
 day, also. JavaScript’s `Date` object doesn’t provide any help in treating such
@@ -151,8 +151,8 @@ var tau = new Tau().setUtcYear(2013).setUtcMonth(0).setUtcDate(30);
 tau.setUtcMonth(1);
 ```
 
-tau.js moves the `tau` reference to the 30<sup>th</sup> of April, although that
-would be an invalid date. But you can check that, via the `Tau#isValid()`
+tau.js moves the `tau` reference to the 30<sup>th</sup> of February, although
+that would be an invalid date. But you can check that, via the `Tau#isValid()`
 method.
 
 Note that tau.js **does** handle date overflow, though, when its outcome is
