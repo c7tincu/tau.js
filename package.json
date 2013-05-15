@@ -13,7 +13,7 @@
       "name": "Cristian Tincu",
       "email": "cristian@rupe.re"
     },
-  "main" : "./dist/tau.js",
+  "main" : "./dist/tau.min.js",
   "devDependencies" :
     {
       "grunt-cli" : "0.1.7",
