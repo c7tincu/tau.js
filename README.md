@@ -138,7 +138,7 @@ date.setUTCMonth(1);
 ```
 
 The native `Date` moves the `date` reference to the 2<sup>nd</sup> of March, as
-there’s no such thing as the 30<sup>th</sup> of Februart. In a more general
+there’s no such thing as the 30<sup>th</sup> of February. In a more general
 context, such a decision might cause trouble, as a naïve API consumer might not
 be aware that a call to `Date#setUTCMonth()` could, in fact, modify the month
 day, also. JavaScript’s `Date` object doesn’t provide any help in treating such
